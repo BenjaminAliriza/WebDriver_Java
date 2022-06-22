@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HomePage {
 
     private WebDriver driver;
-    private By formAuthenticationLink = By.linkText("Form Authentication");
+    private By formAuthenticationLink = By.xpath("//a[@href='/login']");
 
     public HomePage(WebDriver driver){
         this.driver = driver;

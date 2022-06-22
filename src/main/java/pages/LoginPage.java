@@ -22,7 +22,7 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
     }
 
-    public SecureAreaPage loginButton(){
+    public SecureAreaPage clickLoginButton(){
         driver.findElement(loginButton).click();
         return new SecureAreaPage(driver);
     }
