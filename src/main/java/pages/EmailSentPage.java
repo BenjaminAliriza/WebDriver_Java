@@ -7,7 +7,7 @@ public class EmailSentPage {
 
     private WebDriver driver ;
 
-    private By confirmText = By.linkText("Your e-mail's been sent!");
+    private By confirmText = By.xpath("//h1");
 
     public EmailSentPage(WebDriver driver){
         this.driver=driver;

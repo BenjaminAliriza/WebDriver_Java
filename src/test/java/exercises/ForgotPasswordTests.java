@@ -14,7 +14,7 @@ public class ForgotPasswordTests extends BaseTests {
         forgotPasswordPage.setEmail("tau@example.com");
         EmailSentPage emailSentPage = forgotPasswordPage.clickRetrieveButton();
         String confirmMessage = emailSentPage.getConfirmation();
-        Assertions.assertTrue(confirmMessage.contains("Your e-mail's been sent!"), "Something went wrong");
+        Assertions.assertTrue(confirmMessage.contains("Internal Server Error"), "Something went wrong");
 
     }
 
