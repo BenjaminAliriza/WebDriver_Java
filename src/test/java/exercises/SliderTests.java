@@ -9,10 +9,11 @@ public class SliderTests extends BaseTests {
     @Test
     public void sliderPlusArrow(){
 
+        String value = "4";
         var sliderPage = homePage.clickHorizontalSlider();
         sliderPage.clickSlider();
-        sliderPage.slideSlider();
-        Assertions.assertEquals(4, sliderPage.getRange(), "The range did not match expected.");
+        sliderPage.slideSlider(value);
+        Assertions.assertEquals(value, sliderPage.getRange(), "The range did not match expected.");
 
     }
 
