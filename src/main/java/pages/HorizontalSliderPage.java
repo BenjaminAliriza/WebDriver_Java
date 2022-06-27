@@ -19,13 +19,15 @@ public class HorizontalSliderPage {
         driver.findElement(slider).click();
     }
 
-    public void slideSlider(){
-        driver.findElement(slider).sendKeys(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, Keys.ARROW_RIGHT );
-    }
+    public void slideSlider(String value){
+        while (!getRange().equals(value)) {
+            driver.findElement(slider).sendKeys(Keys.ARROW_RIGHT);
+        }
+        }
 
-    public int getRange(){
-        int setRange = Integer.parseInt(driver.findElement(range).getText());
-        return setRange;
+    public String getRange(){
+        String foundRange = driver.findElement(range).getText();
+        return foundRange;
     }
 
 }
