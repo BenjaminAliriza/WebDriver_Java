@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePage {
 
@@ -42,7 +41,12 @@ public class HomePage {
         return new JSAlertsPage(driver);
     }
 
-    private void clickLink(String linkText){
+    public FileUploadPage clickFileUploadPage() {
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+        private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 
