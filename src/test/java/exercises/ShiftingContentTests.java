@@ -7,13 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class TheInternetShiftingContent {
+public class ShiftingContentTests {
 
     private WebDriver driver;
 
 
     public static void main(String[] args) throws InterruptedException {
-        TheInternetShiftingContent TISC = new TheInternetShiftingContent();
+        ShiftingContentTests TISC = new ShiftingContentTests();
         TISC.countMenuElements();
     }
 

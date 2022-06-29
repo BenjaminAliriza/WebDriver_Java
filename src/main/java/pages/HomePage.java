@@ -55,7 +55,12 @@ public class HomePage {
         return new WYSIWYGEditorPage(driver);
     }
 
-        private void clickLink(String linkText){
+    public NestedFramesPage clickNestedFramesPage(){
+        clickLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
+
+    private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
 
