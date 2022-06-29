@@ -26,7 +26,7 @@ public class JavaScriptTests extends BaseTests {
         dropDownPage.selectFromDropDown("Option 1");
         dropDownPage.selectFromDropDown("Option 2");
 
-        Assertions.assertEquals("[Option 1, Option 2]", dropDownPage.getSelectedOptions(),
+        Assertions.assertEquals("[Option 1, Option 2]", dropDownPage.getSelectedOptions().toString(),
                 "An issue has been detected");
     }
 
