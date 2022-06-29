@@ -14,11 +14,4 @@ public class WaitTests extends BaseTests {
         assertEquals("Hello World!", loadingPage.getLoadedText(), "Text didn't match");
     }
 
-    @Test
-    public void testWaitUntilVisible(){
-        var loadingPage = homePage.clickDynamicLoadingPage().clickExample2();
-        loadingPage.clickStart();
-        assertEquals("Hello World!", loadingPage.getLoadedText(), "Text didn't match");
-    }
-
 }
