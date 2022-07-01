@@ -13,7 +13,7 @@ import java.io.File;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseTests {
-    private WebDriver driver;
+    private WebDriver driver;   //look into EventFiringWebDriver alternatives
     protected HomePage homePage;
 
     @BeforeAll
