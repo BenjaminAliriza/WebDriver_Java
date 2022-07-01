@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
+import utils.WindowManager;
+
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseTests {
     private WebDriver driver;
@@ -32,6 +34,10 @@ public class BaseTests {
     @AfterAll
     public void tearDown(){
         driver.quit();//driver.close would close window, while driver.quit ends session and closes everything.
+    }
+
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
     }
 
 }
